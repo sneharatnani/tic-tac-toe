@@ -11,6 +11,41 @@
 </head>
 
 <body>
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+    <p class="display"></p>
+
+    <section class="options">
+        <div class="option1">
+            <p>player vs player</p>
+            <button>play</button>
+        </div>
+        <div class="option2">
+            <p>player vs AI</p>
+            <button>play</button>
+        </div>
+    </section>
+
+    <section class="modal hide">
+        <label for="player1">player one name</label>
+        <input type="text" id="player1">
+        <label for="player2">player two name</label>
+        <input type="text" id="player2">
+        <button class="start-game">let's begin</button>
+    </section>
+
+    <main class="game hide">
+        <p class="column1 row1" id="box1"></p>
+        <p class="column1 row2" id="box2"></p>
+        <p class="column1 row3" id="box3"></p>
+        <p class="column2 row1" id="box4"></p>
+        <p class="column2 row2" id="box5"></p>
+        <p class="column2 row3" id="box6"></p>
+        <p class="column3 row1" id="box7"></p>
+        <p class="column3 row2" id="box8"></p>
+        <p class="column3 row3" id="box9"></p>
+    </main>
 
 </body>
 

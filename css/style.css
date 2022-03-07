@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+header {
+    padding: 10px;
+}
+
+.option1, .option2 {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* modal */
+
+input[type="text"] {
+    display: block;
+    margin: 10px auto;
+}
+
+/* game body */
+.game {
+    font-size: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
+    justify-content: center;
+}
+
+.game p {
+    cursor: pointer;
+}
+
+.column1, .column2 {
+    border-bottom: 2px solid black;
+}
+
+.row1, .row2 {
+    border-right: 2px solid black;
+}
+
+.hide {
+    display: none;
+}
