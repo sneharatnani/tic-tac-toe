@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <script src="script/main.js" defer></script>
 </head>
 
@@ -18,15 +19,17 @@
 
     <section class="options">
         <div class="option1">
+            <img src="img/young.svg" alt="">
             <p>player vs player</p>
             <button>play</button>
         </div>
         <div class="option2">
+            <img src="img/ai.svg" alt="">
             <p>player vs AI</p>
             <button>play</button>
         </div>
     </section>
-
+    <!-- to add player's names -->
     <section class="modal hide">
         <label for="player1">player one name</label>
         <input type="text" id="player1">
@@ -36,17 +39,17 @@
     </section>
 
     <main class="game hide">
-        <p class="column1 row1" id="box1"></p>
-        <p class="column1 row2" id="box2"></p>
-        <p class="column1 row3" id="box3"></p>
-        <p class="column2 row1" id="box4"></p>
-        <p class="column2 row2" id="box5"></p>
-        <p class="column2 row3" id="box6"></p>
-        <p class="column3 row1" id="box7"></p>
-        <p class="column3 row2" id="box8"></p>
-        <p class="column3 row3" id="box9"></p>
+        <p class="column1 row1"></p>
+        <p class="column1 row2"></p>
+        <p class="column1 row3"></p>
+        <p class="column2 row1"></p>
+        <p class="column2 row2"></p>
+        <p class="column2 row3"></p>
+        <p class="column3 row1"></p>
+        <p class="column3 row2"></p>
+        <p class="column3 row3"></p>
     </main>
-
+    <button class="restart hide">restart</button>
 </body>
 
 </html>

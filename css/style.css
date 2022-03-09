@@ -4,6 +4,8 @@
 }
 
 body {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     text-align: center;
 }
 
@@ -13,10 +15,22 @@ button {
 }
 
 header {
-    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Kaushan Script', cursive;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.options {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .option1, .option2 {
+    background: white;
     display: inline-block;
     margin: 10px;
 }
@@ -38,6 +52,7 @@ input[type="text"] {
 }
 
 .game p {
+    font-family: 'Kaushan Script', cursive;
     cursor: pointer;
 }
 
