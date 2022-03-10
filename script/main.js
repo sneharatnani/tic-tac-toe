@@ -1,17 +1,15 @@
 const GameBoard = (function () {
-    const optionBtn = document.querySelectorAll('.options button');
-    const startBtn = document.querySelector('.start-game');
-    // open modal to add names
-    optionBtn.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            document.querySelector('.modal').classList.remove('hide');
-        });
-    });
-    // close model and open game body
-    startBtn.addEventListener('click', closeModal);
+    const restart = document.querySelector('.restart');
+    const modal = document.querySelector('.modal');
+    const overlay = document.querySelector('.overlay');
+    const openModal = () => {
+        modal.classList.remove('hide');
+        overlay.classList.remove('hide');
+    };
     function closeModal() {
         if (Players().player1 !== '' && Players().player2 !== '') {
-            document.querySelector('.modal').classList.add('hide');
+            modal.classList.add('hide');
+            overlay.classList.add('hide');
             document.querySelector('.options').classList.add('hide');
             document.querySelector('.game').classList.remove('hide');
         };
@@ -72,13 +70,28 @@ const GameBoard = (function () {
             return `draw`;
         }
     };
+    restart.addEventListener('click', () => DisplayControl.restartGame());
     return {
-        getWinner
+        getWinner,
+        openModal,
+        closeModal,
     };
 })();
 
 
 const DisplayControl = (function () {
+    // open modal to add names
+    const optionBtn = document.querySelectorAll('.options button');
+    optionBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            GameBoard.openModal();
+        });
+    });
+    // close model and open game body
+    const startBtn = document.querySelector('.start-game');
+    startBtn.addEventListener('click', () => {
+        GameBoard.closeModal();
+    });
     const boxes = document.querySelectorAll('.game p');
     const display = document.querySelector('.display');
     const restart = document.querySelector('.restart');
@@ -135,7 +148,9 @@ const DisplayControl = (function () {
         gameArr = ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x', 'o'];
         restart.classList.add('hide');
     };
-    restart.addEventListener('click', restartGame);
+    return {
+        restartGame,
+    };
 })();
 
 function Players() {

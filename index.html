@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
     <script src="script/main.js" defer></script>
 </head>
 
@@ -15,29 +16,25 @@
     <header>
         <h1>Tic-Tac-Toe</h1>
     </header>
-    <p class="display"></p>
+    <h2 class="display"></h2>
 
     <section class="options">
         <div class="option1">
-            <img src="img/young.svg" alt="">
-            <p>player vs player</p>
+            <h2>player <br> vs <br> player</h2>
             <button>play</button>
         </div>
         <div class="option2">
-            <img src="img/ai.svg" alt="">
-            <p>player vs AI</p>
+            <h2>player <br> vs <br> AI</h2>
             <button>play</button>
         </div>
     </section>
     <!-- to add player's names -->
     <section class="modal hide">
-        <label for="player1">player one name</label>
-        <input type="text" id="player1">
-        <label for="player2">player two name</label>
-        <input type="text" id="player2">
+        <h2>Players</h2>
+        <input type="text" id="player1" placeholder="player one name">
+        <input type="text" id="player2" placeholder="player two name">
         <button class="start-game">let's begin</button>
     </section>
-
     <main class="game hide">
         <p class="column1 row1"></p>
         <p class="column1 row2"></p>
@@ -50,6 +47,11 @@
         <p class="column3 row3"></p>
     </main>
     <button class="restart hide">restart</button>
+    <div class="overlay hide"></div>
+
+    <footer>
+        <p>Crafted by Sneha Ratnani</p>
+    </footer>
 </body>
 
 </html>

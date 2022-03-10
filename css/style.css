@@ -10,60 +10,134 @@ body {
 }
 
 button {
+    cursor: pointer;
     font-size: 1rem;
     padding: 5px;
 }
 
+.overlay {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+}
+
 header {
     font-size: 1.5rem;
-    font-family: 'Kaushan Script', cursive;
     text-transform: uppercase;
     padding: 5px;
 }
 
-.options {
+.display {
+    text-transform: capitalize;
+    color: white;
+}
+
+.options, .game, .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .option1, .option2 {
+    border: 2px solid;
+    padding: 1.2rem 2rem;
     background: white;
     display: inline-block;
     margin: 10px;
+    border-radius: 1rem;
+}
+
+.options p {
+    font-size: 1.2rem;
 }
 
 /* modal */
+.modal {
+    z-index: 10;
+    background: white;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.modal h2,
+header,
+.game p,
+.display,
+footer p {
+    font-family: 'Merienda', cursive;
+}
+
+.modal button {
+    text-transform: capitalize;
+    border: none;
+    padding: 10px;
+    background: #ff8f00c9;
+    border-radius: 6px;
+}
+
+.modal button:hover {
+    background: #ff8f00f7;
+}
 
 input[type="text"] {
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 7px;
+    border: 2px solid;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff8f00f7;
 }
 
 /* game body */
 .game {
-    font-size: 4rem;
+    gap: 0.7rem;
+    top: 46%;
+    font-size: 4.2rem;
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3, 6rem);
+    grid-template-columns: repeat(3, 6.5rem);
+    grid-template-rows: repeat(3, 6.5rem);
     justify-content: center;
 }
 
 .game p {
-    font-family: 'Kaushan Script', cursive;
     cursor: pointer;
+    background: #ffffff4d;
 }
 
-.column1, .column2 {
-    border-bottom: 2px solid black;
-}
-
-.row1, .row2 {
-    border-right: 2px solid black;
+.restart {
+    border: 1px solid black;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    position: absolute;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
 }
 
 .hide {
     display: none;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #ffffff69;
+}
+
+footer p {
+    padding: 10px;
 }
