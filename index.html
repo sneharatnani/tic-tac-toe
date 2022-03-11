@@ -16,16 +16,17 @@
     <header>
         <h1>Tic-Tac-Toe</h1>
     </header>
+
     <h2 class="display"></h2>
 
     <section class="options">
         <div class="option1">
             <h2>player <br> vs <br> player</h2>
-            <button>play</button>
+            <button class="player-player">play</button>
         </div>
         <div class="option2">
             <h2>player <br> vs <br> AI</h2>
-            <button>play</button>
+            <button class="player-ai">play</button>
         </div>
     </section>
     <!-- to add player's names -->
@@ -35,16 +36,17 @@
         <input type="text" id="player2" placeholder="player two name">
         <button class="start-game">let's begin</button>
     </section>
+    <!-- game body -->
     <main class="game hide">
-        <p class="column1 row1"></p>
-        <p class="column1 row2"></p>
-        <p class="column1 row3"></p>
-        <p class="column2 row1"></p>
-        <p class="column2 row2"></p>
-        <p class="column2 row3"></p>
-        <p class="column3 row1"></p>
-        <p class="column3 row2"></p>
-        <p class="column3 row3"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
     </main>
     <button class="restart hide">restart</button>
     <div class="overlay hide"></div>
