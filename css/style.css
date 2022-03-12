@@ -4,9 +4,10 @@
 }
 
 body {
-    background: rgb(238, 174, 202);
-    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: #009688;
+    background: linear-gradient(90deg, #009688 0%, rgba(148, 187, 233, 1) 100%);
     text-align: center;
+
 }
 
 button {
@@ -38,7 +39,9 @@ header {
     color: white;
 }
 
-.options, .game, .modal {
+.modal,
+.options,
+.game {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,7 +103,7 @@ input:focus {
     border: 2px solid #ff8f00f7;
 }
 
-/* game body */
+/* game section */
 .game {
     gap: 0.7rem;
     top: 46%;
@@ -133,11 +136,40 @@ input:focus {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #ffffff69;
 }
 
 footer p {
     padding: 10px;
+}
+
+/* media queries */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .game {
+        font-size: 5.5rem;
+        grid-template-columns: repeat(3, 8.5rem);
+        grid-template-rows: repeat(3, 8.5rem);
+    }
+
+    header {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (width: 280px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .game {
+        grid-template-columns: repeat(3, 5rem);
+        grid-template-rows: repeat(3, 5rem);
+        font-size: 3.3rem;
+    }
+
+    .modal {
+        padding: 20px 10px;
+    }
 }

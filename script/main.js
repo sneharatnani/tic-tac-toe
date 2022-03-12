@@ -96,7 +96,7 @@ const displayControl = (function () {
     // open game choosing options
     function openOptions() {
         gameControl.showEle(options);
-    }
+    };
     // open game body
     function openGame() {
         gameControl.showEle(gameBody);
@@ -110,7 +110,7 @@ const displayControl = (function () {
     // clear game fields
     function clearFields() {
         gameField.forEach((field) => addText(field, ''));
-    }
+    };
 
     // add text content to elements
     function addText(ele, text) {
@@ -192,7 +192,7 @@ const gameControl = (function () {
         ele.classList.remove('hide');
     };
 
-    // stop click events fields
+    // stop click events on fields
     function stopClicks() {
         gameField.forEach((field) => field.style.pointerEvents = 'none');
     };
@@ -200,7 +200,7 @@ const gameControl = (function () {
     // start click events on fields
     function _startClicks() {
         gameField.forEach((field) => field.style.pointerEvents = 'all');
-    }
+    };
 
     // restart function
     function _restartGame() {
@@ -210,6 +210,7 @@ const gameControl = (function () {
         _startClicks();
         displayControl.showDefault();
         displayControl.openGame();/* open game body to start again */
+        hideEle(restart);
     };
 
     // events
