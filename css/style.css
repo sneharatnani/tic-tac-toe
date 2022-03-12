@@ -48,17 +48,30 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* options */
 .option1, .option2 {
-    border: 2px solid;
-    padding: 1.2rem 2rem;
+    box-shadow: 2px 2px 7px;
+    text-transform: uppercase;
+    padding: 1.2rem 1rem;
     background: white;
     display: inline-block;
     margin: 10px;
     border-radius: 1rem;
+    width: 10.8rem;
 }
 
 .options p {
     font-size: 1.2rem;
+}
+
+.options button {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 9px;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    background: #57acbdb3;
+    border-radius: 0.5rem;
 }
 
 /* modal */
@@ -73,7 +86,8 @@ header {
 header,
 .game p,
 .display,
-footer p {
+footer p,
+.options {
     font-family: 'Merienda', cursive;
 }
 
@@ -155,6 +169,15 @@ footer p {
 
     header {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .option1,
+    .option2 {
+        width: 12rem;
+        padding: 1.2rem 2rem;
     }
 }
 
