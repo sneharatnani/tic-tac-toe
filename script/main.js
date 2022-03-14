@@ -50,7 +50,7 @@ const GameBoard = (function () {
     function checkDraw(fields) {
         for (let i = 0; i < 9; i++) {
             if (fields[i].textContent === '') {
-                return false
+                return false;
             };
         };
         return true;
@@ -70,9 +70,8 @@ const displayControl = (function () {
     const restart = document.querySelector('.restart');
     const modal = document.querySelector('.modal');
     const overlay = document.querySelector('.overlay');
-    const options = document.querySelector('.options');
     const gameBody = document.querySelector('.game');
-    const gameSelectBtn = document.querySelectorAll('.options button');
+    const play = document.querySelector('.play');
     const startBtn = document.querySelector('.start-game');
     const display = document.querySelector('.display');
     const gameField = document.querySelectorAll('.game p');
@@ -88,15 +87,11 @@ const displayControl = (function () {
             gameControl.hideEle(overlay);
         };
     };
-    // close choosing options
-    function _closeOptions() {
-        gameControl.hideEle(options);
+    // hide play button
+    function _hidePlay() {
+        gameControl.hideEle(play);
     };
 
-    // open game choosing options
-    function openOptions() {
-        gameControl.showEle(options);
-    };
     // open game body
     function openGame() {
         gameControl.showEle(gameBody);
@@ -151,14 +146,12 @@ const displayControl = (function () {
     };
 
     // events
-    gameSelectBtn.forEach((btn) => {
-        btn.addEventListener('click', _openModal);
-    });
+    play.addEventListener('click', _openModal);
 
     startBtn.addEventListener('click', () => {
         if (Players().player1 !== '' && Players().player2 !== '')/* check for filled inputs */ {
+            _hidePlay();
             _closeModal();
-            _closeOptions();
             openGame();
             showDefault();
         };
@@ -166,7 +159,6 @@ const displayControl = (function () {
 
     return {
         closeGame,
-        openOptions,
         addText,
         showTurn,
         displayWinner,

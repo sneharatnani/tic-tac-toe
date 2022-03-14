@@ -40,7 +40,7 @@ header {
 }
 
 .modal,
-.options,
+.play,
 .game {
     position: absolute;
     top: 50%;
@@ -48,30 +48,19 @@ header {
     transform: translate(-50%, -50%);
 }
 
-/* options */
-.option1, .option2 {
-    box-shadow: 2px 2px 7px;
-    text-transform: uppercase;
-    padding: 1.2rem 1rem;
-    background: white;
-    display: inline-block;
-    margin: 10px;
-    border-radius: 1rem;
-    width: 10.8rem;
-}
-
-.options p {
+/* play button */
+.play {
     font-size: 1.2rem;
+    padding: 7px 1.3rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 1rem;
+    text-transform: uppercase;
 }
 
-.options button {
-    width: 100%;
-    font-size: 1.3rem;
-    padding: 9px;
-    margin-top: 1rem;
-    text-transform: capitalize;
-    background: #57acbdb3;
-    border-radius: 0.5rem;
+.play:hover {
+    box-shadow: 1px 1px 15px white;
 }
 
 /* modal */
@@ -86,8 +75,7 @@ header {
 header,
 .game p,
 .display,
-footer p,
-.options {
+footer p {
     font-family: 'Merienda', cursive;
 }
 
@@ -160,27 +148,6 @@ footer p {
 }
 
 /* media queries */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .game {
-        font-size: 5.5rem;
-        grid-template-columns: repeat(3, 8.5rem);
-        grid-template-rows: repeat(3, 8.5rem);
-    }
-
-    header {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    .option1,
-    .option2 {
-        width: 12rem;
-        padding: 1.2rem 2rem;
-    }
-}
-
 @media screen and (width: 280px) {
     header {
         font-size: 1.2rem;
